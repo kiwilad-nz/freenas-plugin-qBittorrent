@@ -21,7 +21,7 @@ sysrc nzbget_group=Admin
 
 # Download config and set config directory
 rm /usr/local/etc/nzbget.conf
-wget -P /usr/local/etc/nzbget.conf https://github.com/kiwilad-nz/freenas-plugin-NZBget/blob/master/nzbget.conf
+wget -P /usr/local/etc/ https://raw.githubusercontent.com/kiwilad-nz/freenas-plugin-NZBget/master/nzbget.conf
 sysrc nzbget_conf_dir=/config
 
 # Enable nzbget
