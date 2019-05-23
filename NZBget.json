@@ -4,6 +4,7 @@
   "artifact": "https://github.com/kiwilad-nz/freenas-plugin-NZBget.git",
   "pkgs": [
     "nzbget",
+    "wget"
     "ca_root_nss",
     "sqlite3",
     "mono"
