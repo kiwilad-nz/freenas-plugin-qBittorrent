@@ -19,7 +19,9 @@ chown -R Admin:System /usr/local/share/nzbget
 sysrc nzbget_user=System
 sysrc nzbget_group=Admin
 
-# Set config directory
+# Download config and set config directory
+rm /usr/local/etc/nzbget.conf
+wget -P /usr/local/etc/nzbget.conf https://github.com/kiwilad-nz/freenas-plugin-NZBget/blob/master/nzbget.conf
 sysrc nzbget_conf_dir=/config
 
 # Enable nzbget
