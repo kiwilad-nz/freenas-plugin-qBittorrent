@@ -1,6 +1,4 @@
-# NZBget for FreeNAS
-
-Requires FreeNAS 11.2
+# NZBget for FreeNAS 11.2
 
 This Installation method will create a Jail that is fully configurable via the FreeNAS GUI and CLI (shell)
 
@@ -9,9 +7,9 @@ cd /tmp
 wget https://raw.githubusercontent.com/kiwilad-nz/freenas-plugin-NZBget/master/NZBget.json
 iocage fetch -P dhcp=on vnet=on bpf=yes allow_raw_sockets=1 -n NZBget.json --branch 'master'
 ```
-Await the creation of the Jail then carry out the below step.
-The config file for NZBget will need the below ammended within the Jail:
-SSH into the Jail and ammend "/usr/local/etc/nzbget.conf" and set the below:
+Await the creation of the Jail then carry out the below steps.
+The config file for NZBget will need the below amended within the Jail:
+SSH into the Jail and amend "/usr/local/etc/nzbget.conf" by setting the below:
 ```
 vi /usr/local/etc/nzbget.conf
 ```
