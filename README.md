@@ -7,7 +7,8 @@ cd /tmp
 wget https://raw.githubusercontent.com/kiwilad-nz/freenas-plugin-NZBget/master/NZBget.json
 iocage fetch -P dhcp=on vnet=on bpf=yes allow_raw_sockets=1 -n NZBget.json --branch 'master'
 ```
-Await the creation of the Jail then carry out the below steps.
+Await the creation of the Jail.
+
 The config file for NZBget will need the below amended within the Jail:
 SSH into the Jail and amend "/usr/local/etc/nzbget.conf" by setting the below:
 ```
@@ -19,6 +20,8 @@ WebDir=/usr/local/share/nzbget/webui
 ConfigTemplate=/usr/local/share/nzbget/nzbget.conf
 ```
 ESC | :wq (this will write and quit vi editor)
+
+Create directories and mount storage as required for further setup of the application via FreeNAS.
 
 ```
 service nzbget restart
