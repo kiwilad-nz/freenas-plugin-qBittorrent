@@ -1,6 +1,7 @@
 {
   "name": "NZBget",
   "release": "11.2-RELEASE",
+  "artifact": "https://github.com/kiwilad-nz/freenas-plugin-NZBget.git",
   "pkgs": [
     "nzbget",
     "ca_root_nss",
