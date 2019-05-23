@@ -8,4 +8,3 @@ ln -s /usr/local/bin/python2.7 /usr/bin/python2
 # Enable Service
 sysrc nzbget_enable=YES
 sysrc nzbget_conf_dir=/config
-service nzbget restart
