@@ -4,6 +4,6 @@ This Installation method will create a Jail that is fully configurable via the F
 
 ```
 cd /tmp
-wget https://raw.githubusercontent.com/kiwilad-nz/freenas-plugins/master/NZBget.json
+wget https://raw.githubusercontent.com/kiwilad-nz/freenas-plugin-NZBget/master/NZBget.json
 iocage fetch -P dhcp=on vnet=on bpf=yes allow_raw_sockets=1 -n NZBget.json --branch 'master'
 ```
