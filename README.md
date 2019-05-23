@@ -1,6 +1,8 @@
 # NZBget for FreeNAS
+
 Requires FreeNAS 11.2
-This Installation method will create a Jail that is fully configurable via the FreeNAS GUI from the FreeNas CLI (shell)
+
+This Installation method will create a Jail that is fully configurable via the FreeNAS GUI and CLI (shell)
 
 ```
 cd /tmp
@@ -14,6 +16,7 @@ SSH into the Jail and ammend "/usr/local/etc/nzbget.conf" and set the below:
 vi /usr/local/etc/nzbget.conf
 ```
 i - insert
+
 R - overwrite
 ```
 WebDir=/usr/local/share/nzbget/webui
