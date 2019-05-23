@@ -27,5 +27,5 @@ Create directories and mount storage as required for further setup of the applic
 service nzbget restart
 ```
 
-NZBget should be available at http://IP:6789/ | http://nzbget:6789/ (default user/pass: nzbget/tegbzn6789)
+NZBget should now be available at http://IP:6789/ | http://nzbget:6789/ (default user/pass: nzbget/tegbzn6789)
 
