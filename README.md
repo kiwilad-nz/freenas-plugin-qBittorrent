@@ -26,5 +26,5 @@ ESC | :wq (this will write and quit vi editor)
 service nzbget restart
 ```
 
-# NZBget should be available at http://<JailIP>:6789/ or http://nzbget:6789/ (default user/pass: nzbget/tegbzn6789)
+NZBget should be available at http://<JailIP>:6789/ or http://nzbget:6789/ (default user/pass: nzbget/tegbzn6789)
 
