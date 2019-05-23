@@ -15,14 +15,12 @@ SSH into the Jail and ammend "/usr/local/etc/nzbget.conf" and set the below:
 ```
 vi /usr/local/etc/nzbget.conf
 ```
-i - insert
-
-R - overwrite
+i (insert) | R (overwrite)
 ```
 WebDir=/usr/local/share/nzbget/webui
 ConfigTemplate=/usr/local/share/nzbget/nzbget.conf
 ```
-ESC, :wq - this will write and quit vi
+ESC | :wq (this will write and quit vi editor)
 
 ```
 service nzbget restart
