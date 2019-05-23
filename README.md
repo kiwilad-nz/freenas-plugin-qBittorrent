@@ -10,7 +10,7 @@ iocage fetch -P dhcp=on vnet=on bpf=yes allow_raw_sockets=1 -n NZBget.json --bra
 Await the creation of the Jail.
 
 The config file for NZBget will need the below amended within the Jail:
-SSH into the Jail and amend "/usr/local/etc/nzbget.conf" by setting the below:
+SSH into the Jail and edit "/usr/local/etc/nzbget.conf" with the below:
 ```
 vi /usr/local/etc/nzbget.conf
 ```
