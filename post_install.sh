@@ -12,7 +12,7 @@ chown -R System:Admin /config /downloads
 sysrc qbittorrent_user=System
 sysrc qbittorrent_group=Admin
 
-# Download/replace config and set config directory
+# Set config directory
 sysrc qbittorrent_conf_dir=/config
 
 # Enable qbittorrent
