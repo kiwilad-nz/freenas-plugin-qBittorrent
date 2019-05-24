@@ -7,7 +7,7 @@ NOTE: Below will need to be amended to suit your pool and directory setup as min
 ```
 cd /tmp
 wget https://raw.githubusercontent.com/kiwilad-nz/freenas-plugin-qBittorrent/master/qBittorrent.json
-iocage fetch -P dhcp=on vnet=on bpf=yes allow_raw_sockets=1 -n qBittorrent.json --branch 'master'
+iocage fetch -P dhcp=on vnet=on bpf=yes allow_raw_sockets=1 -n qBittorrent.json --branch 'master' --accept
 
 iocage fstab -a qbittorrent /mnt/RAID6/Apps/qBittorrent /config nullfs rw 0 0
 iocage fstab -a qbittorrent /mnt/RAID6/Downloads /downloads nullfs rw 0 0
