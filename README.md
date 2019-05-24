@@ -1,6 +1,7 @@
 # qBittorrent for FreeNAS 11.2
 
-This Installation method will create a Jail that is fully configurable via the FreeNAS GUI and CLI (shell) Below creates the Jail, installs all dependencies, applications and will mount the pool and directories as required.
+This Installation method will create a Jail that is fully configurable via the FreeNAS GUI and CLI (shell).
+Below creates the Jail, installs all dependencies, applications and will mount the pool and directories as required.
 
 NOTE: Below will need to be amended to suit your pool and directory setup as mine will difer to yours slightly. Ensure the directories also have the correct user/group permissions (mine have been setup to use System:Admin as per the post install script).
 ```
