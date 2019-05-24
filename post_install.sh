@@ -1,29 +1,22 @@
 #!/bin/sh
 
 # Create directories
-mkdir -p /config /downloads
-chown -R Admin:System /config /downloads
-
-# Link scripts
-ln -s /usr/local/bin/python2.7 /usr/bin/python
-ln -s /usr/local/bin/python2.7 /usr/bin/python2
+mkdir -p /config /downloads /home/System
+chown -R Admin:System /config /downloads /home/System
 
 # Add system user
 pw group add -n Admin -g 1000
 pw user add System -u 1000 -g 1000 -d /nonexistent -s /usr/bin/nologin
 
 # Set permissions and enable service to user/group
-chown -R Admin:System /usr/local/share/nzbget
-sysrc nzbget_user=System
-sysrc nzbget_group=Admin
+sysrc qbittorrent_user=System
+sysrc qbittorrent_group=Admin
 
 # Download/replace config and set config directory
-rm /usr/local/etc/nzbget.conf
-wget -P /usr/local/etc/ https://raw.githubusercontent.com/kiwilad-nz/freenas-plugin-NZBget/master/nzbget.conf
-sysrc nzbget_conf_dir=/config
+sysrc qbittorrent_conf_dir=/config
 
-# Enable nzbget
-sysrc nzbget_enable=YES
+# Enable qbittorrent
+sysrc qbittorrent_enable=YES
 
-# Start/Restart nzbget
-service nzbget restart
+# Start/Restart qbittorrent
+service qbittorrent restart
