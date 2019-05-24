@@ -2,30 +2,18 @@
 
 This Installation method will create a Jail that is fully configurable via the FreeNAS GUI and CLI (shell)
 
+Below creates the Jail and installs all applicable applications.
 ```
 cd /tmp
 wget https://raw.githubusercontent.com/kiwilad-nz/freenas-plugin-NZBget/master/NZBget.json
 iocage fetch -P dhcp=on vnet=on bpf=yes allow_raw_sockets=1 -n NZBget.json --branch 'master'
 ```
+Below will need to be amended to suit your pool and directory setup.
+```
+iocage fstab -a nzbget /mnt/RAID6/Apps/NZBget /config nullfs rw 0 0
+iocage fstab -a nzbget /mnt/RAID6/Downloads /downloads nullfs rw 0 0
+```
 Await the creation of the Jail.
-
-The config file for NZBget will need the below amended within the Jail:
-SSH into the Jail and edit "/usr/local/etc/nzbget.conf" with the below:
-```
-vi /usr/local/etc/nzbget.conf
-```
-i (insert) | R (overwrite)
-```
-WebDir=/usr/local/share/nzbget/webui
-ConfigTemplate=/usr/local/share/nzbget/nzbget.conf
-```
-ESC | :wq (this will write and quit vi editor)
-
-Create directories and mount storage as required for further setup of the application via FreeNAS.
-
-```
-service nzbget restart
-```
 
 NZBget should now be available at http://IP:6789/ | http://nzbget:6789/ (default user/pass: nzbget/tegbzn6789)
 
