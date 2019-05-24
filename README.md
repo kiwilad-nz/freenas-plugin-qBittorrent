@@ -8,8 +8,8 @@ cd /tmp
 wget https://raw.githubusercontent.com/kiwilad-nz/freenas-plugin-qBittorrent/master/qBittorrent.json
 iocage fetch -P dhcp=on vnet=on bpf=yes allow_raw_sockets=1 -n qBittorrent.json --branch 'master'
 
-iocage fstab -a nzbget /mnt/RAID6/Apps/qBittorrent /config nullfs rw 0 0
-iocage fstab -a nzbget /mnt/RAID6/Downloads /downloads nullfs rw 0 0
+iocage fstab -a qbittorrent /mnt/RAID6/Apps/qBittorrent /config nullfs rw 0 0
+iocage fstab -a qbittorrent /mnt/RAID6/Downloads /downloads nullfs rw 0 0
 ```
 Await the creation of the Jail until you have been provided the Admin portal address.
 
