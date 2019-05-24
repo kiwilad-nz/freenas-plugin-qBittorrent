@@ -2,7 +2,7 @@
 
 # Create directories
 mkdir -p /config /downloads
-chown -R Admin:System /config /downloads
+chown -R System:Admin /config /downloads
 
 # Add system user
 pw group add -n Admin -g 1000
