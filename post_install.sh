@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Create directories
-mkdir -p /config /downloads /home/System
-chown -R Admin:System /config /downloads /home/System
+mkdir -p /config /downloads
+chown -R Admin:System /config /downloads
 
 # Add system user
 pw group add -n Admin -g 1000
