@@ -4,7 +4,6 @@
   "artifact": "https://github.com/kiwilad-nz/freenas-plugin-qBittorrent.git",
   "pkgs": [
     "qbittorrent-nox",
-    "wget",
     "ca_root_nss"
   ],
   "packagesite": "https://pkg.freebsd.org/FreeBSD:11:amd64/quarterly",
