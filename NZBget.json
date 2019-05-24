@@ -1,13 +1,11 @@
 {
-  "name": "NZBget",
+  "name": "qBittorrent",
   "release": "11.2-RELEASE",
-  "artifact": "https://github.com/kiwilad-nz/freenas-plugin-NZBget.git",
+  "artifact": "https://github.com/kiwilad-nz/freenas-plugin-qBittorrent.git",
   "pkgs": [
-    "nzbget",
+    "qbittorrent-nox",
     "wget",
-    "ca_root_nss",
-    "sqlite3",
-    "mono"
+    "ca_root_nss"
   ],
   "packagesite": "https://pkg.freebsd.org/FreeBSD:11:amd64/quarterly",
   "fingerprints": {
