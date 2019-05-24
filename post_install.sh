@@ -17,6 +17,3 @@ sysrc qbittorrent_conf_dir=/config
 
 # Enable qbittorrent
 sysrc qbittorrent_enable=YES
-
-# Start/Restart qbittorrent
-service qbittorrent restart
