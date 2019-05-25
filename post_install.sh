@@ -9,11 +9,11 @@ mkdir -p /config /downloads
 pw groupmod media -m qbittorrent
 
 # Set permissions and enable service to user/group
-sysrc qbittorrent_user=qbittorrent
-sysrc qbittorrent_group=media
+sysrc -f /etc/rc.conf qbittorrent_user="qbittorrent"
+sysrc -f /etc/rc.conf qbittorrent_group="media"
 
 # Set config directory
-sysrc qbittorrent_conf_dir=/config
+sysrc -f /etc/rc.conf qbittorrent_conf_dir="/config"
 
 # Enable qbittorrent
 sysrc qbittorrent_enable=YES
