@@ -3,8 +3,7 @@
   "release": "11.2-RELEASE",
   "artifact": "https://github.com/kiwilad-nz/freenas-plugin-qBittorrent.git",
   "pkgs": [
-    "qbittorrent-nox",
-    "ca_root_nss"
+    "net-p2p/qbittorrent"
   ],
   "packagesite": "https://pkg.freebsd.org/FreeBSD:11:amd64/quarterly",
   "fingerprints": {
