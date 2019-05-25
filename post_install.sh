@@ -3,13 +3,13 @@
 # Create directories
 mkdir -p /config /downloads
 
-# Add system user
-pw group add -n Admin -g 1000
-pw user add System -u 1000 -g 1000 -d /nonexistent -s /usr/bin/nologin
+# Modify installed user emby (989:989) tp match constant UID/GID from other plugins (1000:1000)
+pw groupmod qbittorrent -n qbittorrent -g 1000
+pw usermod qbittorrent -n qbittorrent -u 1000 -g 1000
 
 # Set permissions and enable service to user/group
-sysrc qbittorrent_user=System
-sysrc qbittorrent_group=Admin
+sysrc qbittorrent_user=qbittorrent
+sysrc qbittorrent_group=qbittorrent
 
 # Set config directory
 sysrc qbittorrent_conf_dir=/config
@@ -17,4 +17,5 @@ sysrc qbittorrent_conf_dir=/config
 # Enable qbittorrent
 sysrc qbittorrent_enable=YES
 
-echo "Please open the URL and Login with Username: admin, Password: adminadmin"
+# Complete message - Print below text
+echo "Please open the URL to continue to Configure qBittorrent (user: admin, Password: adminadmin)."
