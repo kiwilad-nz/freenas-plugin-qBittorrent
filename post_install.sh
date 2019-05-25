@@ -17,7 +17,7 @@ sysrc -f /etc/rc.conf qbittorrent_group="media"
 sysrc -f /etc/rc.conf qbittorrent_conf_dir="/config"
 
 # Enable qbittorrent
-sysrc qbittorrent_enable=YES
+sysrc -f /etc/rc.conf qbittorrent_enable="YES"
 
 # Complete message - Print below text
 echo "qBittorrent Successfully Installed"
