@@ -16,9 +16,5 @@ iocage fstab -a qbittorrent /mnt/RAID6/Downloads /downloads nullfs rw 0 0
 ```
 Await the creation of the Jail until you have been provided the Admin portal address.
 
-```
-iocage exec qbittorrent service qbittorrent restart
-```
-
 qBittorrent should now be available at http://qBittorrent:8080/ (default user/pass: admin/adminadmin)
 
