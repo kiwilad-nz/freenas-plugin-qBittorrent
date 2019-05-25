@@ -17,8 +17,5 @@ sysrc qbittorrent_conf_dir=/config
 # Enable qbittorrent
 sysrc qbittorrent_enable=YES
 
-# Start qBittorrent
-service qbittorrent start
-
 # Complete message - Print below text
 echo "Please open the URL to continue to Configure qBittorrent (user: admin, Password: adminadmin)."
