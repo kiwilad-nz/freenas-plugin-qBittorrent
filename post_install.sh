@@ -18,4 +18,4 @@ sysrc qbittorrent_conf_dir=/config
 sysrc qbittorrent_enable=YES
 
 # Complete message - Print below text
-echo "Please open the URL to continue to Configure qBittorrent (user: admin, Password: adminadmin)."
+echo "qBittorrent Successfully Installed"
