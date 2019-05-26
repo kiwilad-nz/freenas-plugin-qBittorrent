@@ -6,8 +6,8 @@ mkdir -p /config /downloads
 # Add Jail user qbitorrent (850:850) tp FreeNAS group media (8675309)
 # pw groupadd -n media -g 8675309
 # pw groupmod media -m qbittorrent
-pw useradd -n system -u 1000 -d /nonexistent -s /usr/sbin/nologin
 pw groupadd -n admin -g 1000
+pw useradd -n system -u 1000 -g 1000 -d /nonexistent -s /usr/sbin/nologin
 
 # Set config directory
 sysrc -f /etc/rc.conf qbittorrent_conf_dir="/config"
