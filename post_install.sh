@@ -3,24 +3,22 @@
 # Create directories
 mkdir -p /config /downloads
 
-# Modify installed user qbitorrent (989:989) tp match System:Admin UID:GID from FreeNAS (1000:1000)
-# pw groupmod -n qbittorrent -l Admin -g 1000
-# pw usermod -n qbittorrent -l System -u 1000 -g 1000
-# pw groupadd -n media -g 8675309
-# pw groupmod media -m qbittorrent
-
-# Set permissions and enable service to user/group
-# sysrc -f /etc/rc.conf qbittorrent_user="qbittorrent"
-# sysrc -f /etc/rc.conf qbittorrent_group="media"
+# Add Jail user qbitorrent (850:850) tp FreeNAS group media (8675309)
+pw groupadd -n media -g 8675309
+pw groupmod media -m qbittorrent
 
 # Set config directory
 sysrc -f /etc/rc.conf qbittorrent_conf_dir="/config"
 
+# Set service to run using the user:group
+sysrc -f /etc/rc.conf qbittorrent_user="qbittorrent"
+sysrc -f /etc/rc.conf qbittorrent_group="media"
+
+# Set folder/file permissions to the user:group
+chown -R qbittorrent:media /var/db/qbittorrent/conf /config
+
 # Enable qbittorrent
 sysrc -f /etc/rc.conf qbittorrent_enable="YES"
-
-# Start qbittorrent
-service qbittorrent start
 
 # Complete message - Print below text
 echo "qBittorrent Successfully Installed"
