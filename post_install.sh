@@ -10,8 +10,8 @@ pw groupadd -n media -g 8675309
 pw groupmod media -m qbittorrent
 
 # Set permissions and enable service to user/group
-sysrc -f /etc/rc.conf qbittorrent_user="qbittorrent"
-sysrc -f /etc/rc.conf qbittorrent_group="media"
+# sysrc -f /etc/rc.conf qbittorrent_user="qbittorrent"
+# sysrc -f /etc/rc.conf qbittorrent_group="media"
 
 # Set config directory
 sysrc -f /etc/rc.conf qbittorrent_conf_dir="/config"
