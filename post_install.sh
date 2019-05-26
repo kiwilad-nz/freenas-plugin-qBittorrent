@@ -3,7 +3,7 @@
 # Create directories
 mkdir -p /config /downloads
 
-# Add Jail user qbitorrent (850:850) tp FreeNAS group media (8675309)
+# Create new user:group for service to run with
 pw groupadd -n admin -g 1000
 pw useradd -n system -u 1000 -g 1000 -d /nonexistent -s /usr/sbin/nologin
 
