@@ -17,7 +17,7 @@ sysrc -f /etc/rc.conf qbittorrent_user="system"
 sysrc -f /etc/rc.conf qbittorrent_group="admin"
 
 # Set folder/file permissions to the user:group
-chown -R admin:system /var/db/qbittorrent/ /config
+chown -R system:admin /var/db/qbittorrent /config
 
 # Enable qbittorrent
 sysrc -f /etc/rc.conf qbittorrent_enable="YES"
