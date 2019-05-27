@@ -20,5 +20,8 @@ chown -R system:media /var/db/qbittorrent/ /config
 # Enable qbittorrent
 sysrc -f /etc/rc.conf qbittorrent_enable="YES"
 
+# Start qbittorrent
+service qbittorrent start
+
 # Complete message - Print below text
 echo "qBittorrent Successfully Installed"
