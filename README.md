@@ -16,5 +16,5 @@ iocage restart qbittorrent
 ```
 Await the creation of the Jail until you have been provided the Admin portal address.
 
-qBittorrent should now be available at http://qBittorrent:8080/ (default user/pass: admin/admin)
+qBittorrent should now be available at http://qBittorrent:8080/ (default user/pass: admin/adminadmin)
 
