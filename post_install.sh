@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Create directories
-mkdir -p /config /downloads
+mkdir -p /config
 
 # Create new user:group for service to run with
 pw groupadd -n media -g 8675309
