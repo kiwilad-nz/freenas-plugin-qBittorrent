@@ -5,7 +5,7 @@
   "pkgs": [
     "qbittorrent-nox"
   ],
-  "packagesite": "https://pkg.freebsd.org/FreeBSD:11:amd64/quarterly",
+  "packagesite": "https://pkg.freebsd.org/FreeBSD:11:amd64/latest",
   "fingerprints": {
     "plugin-default": [{
       "function": "sha256",
