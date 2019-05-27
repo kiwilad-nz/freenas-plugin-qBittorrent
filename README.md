@@ -10,7 +10,7 @@ wget https://raw.githubusercontent.com/kiwilad-nz/freenas-plugin-qBittorrent/mas
 iocage fetch -P dhcp=on vnet=on bpf=yes allow_raw_sockets=1 -n qBittorrent.json --branch 'master' --accept
 rm /tmp/qBittorrent.json
 iocage fstab -a qbittorrent /mnt/RAID6/Apps/qBittorrent /config nullfs rw 0 0
-iocage fstab -a qbittorrent /mnt/RAID6/Downloads /downloads nullfs rw 0 0
+iocage fstab -a qbittorrent /mnt/RAID6/Downloads /var/db/qbittorrent/Downloads nullfs rw 0 0
 iocage restart qbittorrent
 #
 ```
