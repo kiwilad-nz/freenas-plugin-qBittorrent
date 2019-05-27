@@ -20,6 +20,9 @@ chown -R system:media /var/db/qbittorrent/ /config /downloads
 # Enable qbittorrent
 sysrc -f /etc/rc.conf qbittorrent_enable="YES"
 
+# Set downloads folder
+sysrc -f /etc/rc.conf qbittorrent_download_dir="/downloads"
+
 # Start qbittorrent
 service qbittorrent start
 
