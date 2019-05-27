@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Create directories
-mkdir -p /config
+mkdir -p /config /downloads
 
 # Create new user:group for service to run with
 pw groupadd -n media -g 8675309
@@ -15,7 +15,7 @@ sysrc -f /etc/rc.conf qbittorrent_user="system"
 sysrc -f /etc/rc.conf qbittorrent_group="media"
 
 # Set folder/file permissions to the user:group
-chown -R system:media /var/db/qbittorrent/ /config
+chown -R system:media /var/db/qbittorrent/ /config /downloads
 
 # Enable qbittorrent
 sysrc -f /etc/rc.conf qbittorrent_enable="YES"
